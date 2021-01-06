@@ -2,4 +2,4 @@
 
 
 
-<iframe src="https://www.slideshare.net/ManthanAmbolkar/slideshelf" width="615px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+Please visit https://www2.slideshare.net/ManthanAmbolkar/enhance-and-quantify-microstructure-using-machine-learning-240979461
