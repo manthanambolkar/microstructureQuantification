@@ -102,22 +102,6 @@ tensorboard --logdir MODEL_DIR
 
 </p>
 
-## Evaluation
-To evaluate how model perform, one can use the following command:
-```bash
-python evaluate.py --help
-```
-The current best model build by this implementation achieves `77.31%` mIoU on the Pascal VOC 2012 
-validation dataset. 
-
-| Network Backbone | train OS | eval OS | SC  | mIOU paper  | mIOU repo  |
-|:----------------:|:--------:|:-------:|:---:|:-----------:|:----------:|
-| Resnet101        | 16       | 16      |     | 78.85%      | **77.31%** | 
-
-Here, the above model was trained about 9.5 hours (with Tesla V100 and r1.6) with following parameters:
-```bash
-python train.py --train_epochs 43 --batch_size 15 --weight_decay 2e-4 --model_dir models/ba=15,wd=2e-4,max_iter=30k --max_iter 30000
-```
 
 ## Inference
 To apply semantic segmentation to your images, one can use the following commands:
@@ -128,18 +112,6 @@ The trained model is available [here](https://www.dropbox.com/s/1xrd4c5atyrkb6z/
 One can find the detailed explanation of mask such as meaning of color in 
 [DrSleep's repo](https://github.com/DrSleep/tensorflow-deeplab-resnet).
 
-## TODO:
-Pull requests are welcome.
-- [x] Implement Decoder
-- [x] Resnet as Network Backbone
-- [x] Training on cityscapes
-- [ ] Xception as Network Backbone
-- [ ] Implement depthwise separable convolutions
-- [ ] Make network more GPU memory efficient (i.e. support larger batch size)
-- [ ] Multi-GPU support
-- [ ] Channels first support (Apparently large performance boost on GPU)
-- [ ] Model pretrained on MS-COCO
-- [ ] Unit test
 
 ## Acknowledgment
 This repo borrows code heavily from 
